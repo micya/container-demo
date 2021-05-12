@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi
+spec:
+  selector:
+    matchLabels:
+      app: webapi
+  template:
+    metadata:
+      labels:
+        app: webapi
+    spec:
+      containers:
+      - name: webapi
+        image: micya/pet-webapi
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
+        ports:
+        - containerPort: 80
+        env:
+        - name: ConnectionStrings__PetContext
+          value: Server=tcp:data-test-8.database.windows.net,1433;Initial Catalog=basic-data;Persist Security Info=False;User ID=micya;Password=tempPassword!!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
