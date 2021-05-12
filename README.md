@@ -17,8 +17,16 @@ Deploy services
 kubectl apply -f yaml/service
 ```
 
+Architecture without ingress:
+
+![basic architecture](img/basic-arch.png)
+
 Deploy another app and ingress
 
 ```bash
 kubectl apply -f yaml/ingress
 ```
+
+Architecture with ingress:
+
+![ingress architecture](img/ingress-arch.png)
