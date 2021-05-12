@@ -1,5 +1,5 @@
+using common;
 using Microsoft.EntityFrameworkCore;
-using webapi.Models;
 
 namespace webapi.Data
 {

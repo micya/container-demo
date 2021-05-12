@@ -1,4 +1,4 @@
-namespace webapi.Models
+namespace common
 {
     public class Pet
     {
